@@ -1,13 +1,13 @@
-#include "IIR_Filter_MAF.h"
+#include "FIR_Filter_MAF.h"
 
-void IIR_Filter_MAF::Init(int _window_size)
+void FIR_Filter_MAF::Init(int _window_size)
 {
     p = _window_size;
     u_in = new double[p];
     memset(u_in, 0, sizeof(double) * p);
 }
 
-const double &IIR_Filter_MAF::Update(const double &_u_in)
+const double &FIR_Filter_MAF::Update(const double &_u_in)
 {
     u_in[current_idx] = _u_in;
 
