@@ -6,7 +6,6 @@
 - This library implements the moving average filter with the window size `p` to conduct the digital signal processing.
 - The following example illustrates how to use this library to perform digital signal processing based on the moving average filter.
 
-
 ## Example
 
 ```cpp
