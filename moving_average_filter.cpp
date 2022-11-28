@@ -1,13 +1,13 @@
-#include "FIR_Filter_MAF.h"
+#include "moving_average_filter.h"
 
-void FIR_Filter_MAF::Init(int _window_size)
+void MovingAverageFilter::init(int _window_size)
 {
     p = _window_size;
     u_in = new double[p];
     memset(u_in, 0, sizeof(double) * p);
 }
 
-const double &FIR_Filter_MAF::Update(const double &_u_in)
+const double &MovingAverageFilter::update(const double &_u_in)
 {
     u_in[current_idx] = _u_in;
 
