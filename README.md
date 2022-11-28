@@ -2,9 +2,16 @@
 
 ## Introduction
 
-- This library is developed on August 11, 2022.
-- This library implements the moving average filter with the window size `p` to conduct the digital signal processing.
-- The following example illustrates how to use this library to perform digital signal processing based on the moving average filter.
+- This library is developed on August 11, 2022 (previous version: April 03, 2022).
+- This library implements the moving average filter (MAF) with a user-defined window size `p` to conduct the digital signal processing (DSP).
+- The following example illustrates how to use this library to perform DSP based on the MAF.
+- Algorithm:
+
+$$
+y_f[k] = \frac{1}{p}\left(y[k] + y[k-1] + \cdots + y[k-p+1]\right)
+$$
+
+- where $y[k]$ is the measured data in time index $k$ and $y_f[k]$ is the corresponding filtered data.
 
 ## Example
 
