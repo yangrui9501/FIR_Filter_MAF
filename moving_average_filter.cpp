@@ -7,6 +7,7 @@ void MovingAverageFilter::init(int _window_size)
     memset(u_in, 0, sizeof(double) * p);
 }
 
+
 const double &MovingAverageFilter::update(const double &_u_in)
 {
     u_in[current_idx] = _u_in;
