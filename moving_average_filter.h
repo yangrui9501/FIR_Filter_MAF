@@ -19,6 +19,13 @@ public:
     MovingAverageFilter() { memset(this, 0, sizeof(MovingAverageFilter)); }
 
     void init(int _window_size);
+    void set_init(const double& _value)
+    {
+        for (int i = 0; i < p; i++)
+        {
+            u_in[i] = _value;
+        }
+    }   
     const double &update(const double &_u_in);
 
 protected:
